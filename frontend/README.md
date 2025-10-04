@@ -1,16 +1,76 @@
-# React + Vite
+# Minimal E-Commerce Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal, modern e-commerce web application built with React, Redux Toolkit, Express.js, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Product listing page with images, names, and prices
+- Add to cart functionality with Redux state management
+- Cart modal with quantity controls, subtotal, and total
+- Checkout flow with backend integration
+- Cart state persisted in localStorage
+- Responsive, clean UI with Tailwind CSS
+- Loading and error handling for product fetch
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React.js (Vite), Redux Toolkit, Tailwind CSS
+- **Backend:** Node.js, Express.js
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Clone the repository
+
+```sh
+git clone https://github.com/Mayur244/E-Commerce.git
+cd E-Commerce
+```
+
+### 2. Install dependencies
+
+#### Backend
+
+```sh
+cd backend
+npm install
+```
+
+#### Frontend
+
+```sh
+cd ../frontend
+npm install
+```
+
+### 3. Start the backend server
+
+```sh
+cd ../backend
+node server.js
+```
+
+The backend will run on [http://localhost:5000](http://localhost:5000).
+
+### 4. Start the frontend development server
+
+```sh
+cd ../frontend
+npm run dev
+```
+
+The frontend will run on [http://localhost:5173](http://localhost:5173) (default Vite port).
+
+### 5. Open the app
+
+Visit [http://localhost:5173](http://localhost:5173) in your browser.
+
+## API Endpoints
+
+- `GET /api/products` — Returns the list of products
+- `POST /api/checkout` — Receives cart items and returns a success message
+
+## Notes
+
+- Make sure the backend is running before starting the frontend.
+- The frontend expects the backend to be available at `/api/*` endpoints.
+- Product images are HD Unsplash links for demo purposes.
