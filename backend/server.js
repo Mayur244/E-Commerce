@@ -74,8 +74,6 @@ app.get("/api/products", (req, res) => {
   res.json(products);
 });
 
-// const items = [{id : 1, quantity : 2}]
-// let items;
 
 app.post("/api/checkout", (req, res) => {
 
@@ -90,7 +88,7 @@ app.post("/api/checkout", (req, res) => {
   }
 
   items.forEach((order) => {
-    const product = products.find((p) => p.id === order.id);
+    const product = products.find((p) => p.id === order.productId);
     if (product) {
       console.log(`- ${product.name} x ${order.quantity}`);
     }
@@ -98,10 +96,6 @@ app.post("/api/checkout", (req, res) => {
 
   res.json({ message: "Order placed successfully" });
 });
-
-// app.get('/', (req, res) => {
-//     res.send("Hello World!");
-// })
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

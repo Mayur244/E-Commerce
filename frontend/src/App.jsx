@@ -7,7 +7,7 @@ function App() {
   const [cartOpen, setCartOpen] = useState(false);
 
   return (
-    <div className="bg-gray-50  min-h-screen">
+    <div className="bg-blue-200 min-h-screen">
       <Header onCartClick={() => setCartOpen(1)} />
       <main className="max-w-6xl mx-auto px-4 py-8">
         <ProductList />

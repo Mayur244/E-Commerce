@@ -10,9 +10,9 @@ const Header = ({ onCartClick }) => {
   return (
     <header className="bg-blue-600 shadow-2xs sticky top-0 z-10">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
-        <h1 className="text-2xl font-bold text-white"> GadgetMart</h1>
+        <button className="text-2xl font-bold text-white cursor-pointer"> GadgetMart</button>
         <button
-          className="relative"
+          className="relative cursor-pointer"
           onClick={onCartClick}
         >
           <ShoppingCartIcon className="h-7 w-7 text-white" />

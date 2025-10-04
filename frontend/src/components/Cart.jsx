@@ -41,7 +41,6 @@ const Cart = ({ open, onClose }) => {
         dispatch(setCheckoutSuccess(false));
         onClose();
       }, 2000);
-      // For demo: log response
       console.log("Checkout response:", data);
     } catch (err) {
       setError(err.message);
@@ -63,7 +62,7 @@ const Cart = ({ open, onClose }) => {
       role="dialog"
     >
       <div
-        className={`bg-white rounded-lg shadow-lg w-full max-w-md mx-2 transform transition-all duration-300 ${
+        className={`bg-blue-100 rounded-lg shadow-lg w-full max-w-md mx-2 transform transition-all duration-300 ${
           open
             ? "scale-100 opacity-100 translate-y-0"
             : "scale-95 opacity-0 translate-y-10"
@@ -95,7 +94,7 @@ const Cart = ({ open, onClose }) => {
                   <img
                     src={item.imageUrl}
                     alt={item.name}
-                    className="w-14 h-14 object-contain bg-gray-100 rounded"
+                    className="w-14 h-14 object-cover bg-gray-100 rounded"
                   />
                   <div className="flex-1">
                     <div className="font-semibold">{item.name}</div>
@@ -105,7 +104,7 @@ const Cart = ({ open, onClose }) => {
                     </div>
                     <div className="flex items-center mt-1">
                       <button
-                        className="px-2 py-0.5 bg-gray-200 rounded hover:bg-gray-300 cursor-pointer"
+                        className="px-2 py-0.5 bg-gray-300 rounded hover:bg-gray-400 cursor-pointer"
                         onClick={() => dispatch(decrementQty(item.id))}
                         disabled={item.quantity === 1}
                       >
@@ -113,7 +112,7 @@ const Cart = ({ open, onClose }) => {
                       </button>
                       <span className="px-2">{item.quantity}</span>
                       <button
-                        className="px-2 py-0.5 bg-gray-200 rounded hover:bg-gray-300 cursor-pointer"
+                        className="px-2 py-0.5 bg-gray-300 rounded hover:bg-gray-400 cursor-pointer"
                         onClick={() => dispatch(incrementQty(item.id))}
                       >
                         +

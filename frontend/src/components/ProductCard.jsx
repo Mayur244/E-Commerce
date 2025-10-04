@@ -6,7 +6,7 @@ const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="bg-white rounded-lg shadow hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex flex-col cursor-pointer">
+    <div className="bg-white/30 backdrop-blur-md rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-200 flex flex-col border border-white/40 cursor-pointer">
       <img
         src={product.imageUrl}
         alt={product.name}
